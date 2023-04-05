@@ -9,6 +9,31 @@
 <body>
     <h1> GitHub Practice</h1>
     <p> changed </p>
-    LOGIN FORM
+    <div class="Time">
+        <h1>Time Elapsed</h1>
+        <h4 id="time"></h4>
+    </div>
+    <script>
+    var startTime, endTime;
+
+function start() {
+  startTime = new Date();
+};
+
+function end() {
+  endTime = new Date();
+  var timeDiff = endTime - startTime; //in ms
+  // strip the ms
+  timeDiff /= 1000;
+
+  // get seconds 
+  var seconds = Math.round(timeDiff);
+  document.getElementById('time').innerHTML=seconds + " Seconds";
+}
+</script>
+
+    <button onclick="start()">Start Game</button>
+    <button onclick="end()">End Game</button>
+   
 </body>
 </html>
