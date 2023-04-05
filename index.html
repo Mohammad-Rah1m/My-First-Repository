@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="app.js"></script>
+
 </head>
 <body>
     <h1> GitHub Practice</h1>
@@ -13,25 +15,7 @@
         <h1>Time Elapsed</h1>
         <h4 id="time"></h4>
     </div>
-    <script>
-    var startTime, endTime;
-
-function start() {
-  startTime = new Date();
-};
-
-function end() {
-  endTime = new Date();
-  var timeDiff = endTime - startTime; //in ms
-  // strip the ms
-  timeDiff /= 1000;
-
-  // get seconds 
-  var seconds = Math.round(timeDiff);
-  document.getElementById('time').innerHTML=seconds + " Seconds";
-}
-</script>
-
+   
     <button onclick="start()">Start Game</button>
     <button onclick="end()">End Game</button>
    
